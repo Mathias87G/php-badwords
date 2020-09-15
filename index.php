@@ -3,15 +3,19 @@ Visualizzare a schermo il paragrafo con la relativa lunghezza e sostituire la ba
 <?php
 $text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 $badword = $_GET['badword'];
-$textReplace = str_replace($badword, '***', $text) . ' ' .  strlen($text) . ' caratteri';
+$textReplace = str_replace($badword, '***', $text);
+$len = strlen($textReplace);
  ?>
+
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title></title>
+     <link rel="stylesheet" href="css/style.css">
+     <title>Esercizio php</title>
    </head>
    <body>
      <p><?php echo $textReplace ?></p>
+     <h4><?php echo $len . ' caratteri'?></h4>
    </body>
  </html>
